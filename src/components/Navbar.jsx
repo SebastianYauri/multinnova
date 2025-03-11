@@ -26,12 +26,12 @@ function Navbar() {
         <div className={`navbar-menu ${isOpen ? 'open' : ''}`}>
           <button className="close-button" onClick={toggleMenu}>✖</button>
           <ul>
-            <li className="navbar-item"><a href="#" className="block py-2 px-4 hover:bg-blue-700 rounded">INICIO</a></li>
-            <li className="navbar-item"><a href="#" className="block py-2 px-4 hover:bg-blue-700 rounded">NOSOTROS</a></li>
-            <li className="navbar-item"><a href="#" className="block py-2 px-4 hover:bg-blue-700 rounded">PRODUCTOS</a></li>
-            <li className="navbar-item"><a href="#" className="block py-2 px-4 hover:bg-blue-700 rounded">SERVICIOS</a></li>
-            <li className="navbar-item"><a href="#" className="block py-2 px-4 hover:bg-blue-700 rounded">PROYECTOS</a></li>
-            <li className="navbar-item"><a href="#" className="block py-2 px-4 hover:bg-blue-700 rounded">CONTACTO</a></li>
+            <li className="navbar-item"><a href="#">INICIO</a></li>
+            <li className="navbar-item"><a href="#">NOSOTROS</a></li>
+            <li className="navbar-item"><a href="#">PRODUCTOS</a></li>
+            <li className="navbar-item"><a href="#">SERVICIOS</a></li>
+            <li className="navbar-item"><a href="#">PROYECTOS</a></li>
+            <li className="navbar-item"><a href="#">CONTACTO</a></li>
           </ul>
         </div>
       </div>

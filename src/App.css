@@ -51,8 +51,8 @@ body, html {
 }
 
 .navbar {
-  background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con transparencia */
-  color: rgb(0, 0, 0); /* Letras negras */
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo negro con transparencia */
+  color: #F26E22; /* Letras blancas */
   padding: 0.5rem 1rem; /* Ajustar el padding para reducir el alto del navbar */
   text-align: center;
   position: fixed;
@@ -124,11 +124,27 @@ body, html {
   padding: 0.5rem 1rem;
   cursor: pointer; /* Asegura que los enlaces no se vean como editables */
   user-select: none; /* Evita que los enlaces sean seleccionables */
+  position: relative;
 }
 
 .navbar-item a:hover {
-  background-color: #0055a5; /* Color azul más claro para el hover */
-  border-radius: 5px;
+  color: #F26E22; /* Color rojo para el hover */
+}
+
+.navbar-item a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #ff4d4d; /* Color rojo para la línea */
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+.navbar-item a:hover::after {
+  width: 100%;
 }
 
 /* Estilos responsivos */
@@ -189,6 +205,50 @@ body, html {
     display: block;
     width: 100%;
     padding: 1rem;
+  }
+}
+
+@media (min-width: 769px) {
+  /* El contenedor del menú se comporta como flex row */
+  .navbar-menu {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: white;
+    width: auto;
+    height: auto;
+    padding: 0;
+  }
+
+  /* Forzamos a que el ul se muestre como fila */
+  .navbar-menu ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;       /* Espacio entre títulos (opcional) */
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Cada ítem se muestra en línea */
+  .navbar-item {
+    display: inline-block;
+    width: auto;
+    text-align: center;
+  }
+
+  .navbar-item a {
+    display: inline-block;
+    width: auto;
+    padding: 0.5rem 1rem;
+  }
+
+  /* Ocultamos los botones de despliegue en PC */
+  .menu-button,
+  .close-button {
+    display: none;
   }
 }
 
