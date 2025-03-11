@@ -108,36 +108,18 @@ body, html {
 }
 
 .navbar-menu {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 250px;
-  height: 100%;
-  background-color: #ff4d4d; /* Fondo rojo */
-  color: white;
-  transition: right 0.3s ease;
-  z-index: 1001; /* Asegura que el menú esté por encima del navbar */
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.navbar-menu.open {
-  right: 0;
-}
-
-.close-button {
-  align-self: flex-end;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: white;
+.navbar-item {
+  margin: 0 1rem;
 }
 
 .navbar-item a {
-  color: white; /* Color del texto del navbar */
+  color: #2A3E59; /* Color del texto del navbar */
   text-decoration: none;
   padding: 0.5rem 1rem;
   cursor: pointer; /* Asegura que los enlaces no se vean como editables */
@@ -145,7 +127,7 @@ body, html {
 }
 
 .navbar-item a:hover {
-  background-color: #ff6666; /* Color rojo más claro para el hover */
+  background-color: #0055a5; /* Color azul más claro para el hover */
   border-radius: 5px;
 }
 
@@ -170,13 +152,32 @@ body, html {
   }
 
   .navbar-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100%;
+    background-color: #ff4d4d; /* Fondo rojo */
+    color: white;
+    transition: right 0.3s ease;
+    z-index: 1001; /* Asegura que el menú esté por encima del navbar */
+    display: flex;
     flex-direction: column;
-    width: 100%;
-    display: none; /* Ocultar el menú por defecto en vista móvil */
+    align-items: flex-start;
+    padding: 1rem;
   }
 
-  .navbar-menu.block {
-    display: block; /* Mostrar el menú cuando se haga clic en el botón */
+  .navbar-menu.open {
+    right: 0;
+  }
+
+  .close-button {
+    align-self: flex-end;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
   }
 
   .navbar-item {
