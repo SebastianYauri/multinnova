@@ -105,6 +105,7 @@ body, html {
   border: none;
   font-size: 2rem;
   cursor: pointer;
+  padding: 0%;
 }
 
 .navbar-menu {
@@ -165,6 +166,7 @@ body, html {
     display: block;
     order: 2;
     align-self: flex-start;
+    color: #2A3E59; /* Nuevo color para el botón de menú */
   }
 
   .navbar-menu {
@@ -173,7 +175,7 @@ body, html {
     right: -100%;
     width: 250px;
     height: 100%;
-    background-color: #ff4d4d; /* Fondo rojo */
+    background-color: #F26E22; /* Fondo rojo */
     color: white;
     transition: right 0.3s ease;
     z-index: 1001; /* Asegura que el menú esté por encima del navbar */
@@ -205,6 +207,10 @@ body, html {
     display: block;
     width: 100%;
     padding: 1rem;
+  }
+
+  .navbar-item a {
+    color: white !important;
   }
 }
 
@@ -249,6 +255,19 @@ body, html {
   .menu-button,
   .close-button {
     display: none;
+  }
+
+  /* Aumenta la altura del logo en PC */
+  .logo-image {
+    height: 80px; /* Puedes ajustar este valor según lo desees */
+  }
+  
+  /* Evita que aparezca el cursor de texto (I) y deshabilita la selección */
+  .navbar-logo,
+  .logo-image {
+    user-select: none;
+    outline: none;
+    cursor: default;
   }
 }
 
