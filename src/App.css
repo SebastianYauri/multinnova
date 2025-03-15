@@ -214,6 +214,21 @@ body, html {
   .navbar-item a {
     color: white !important;
   }
+
+  /* Reubicar flechas para vista móvil */
+  .next-arrow {
+    right: 10% !important;  /* Ajusta el valor según lo deseado */
+  }
+  
+  .prev-arrow {
+    left: 10% !important;   /* Ajusta el valor según lo deseado */
+  }
+  
+  /* Opcional: si deseas asegurar que se mantengan centradas verticalmente */
+  .custom-arrow {
+    top: 80% !important;
+    transform: translateY(-50%) !important;
+  }
 }
 
 @media (min-width: 769px) {
@@ -279,7 +294,7 @@ body, html {
   overflow: hidden;
   background-color: white; /* Fondo blanco para el carrusel */
   margin-top: 0; /* Eliminar cualquier margen superior */
-  padding-top: 0; /* Eliminar cualquier padding superior */
+  padding-top: 60px; /* Ajusta este valor según la altura de tu navbar */
   position: relative; /* Asegura que el carrusel esté pegado al navbar */
   top: 0; /* Asegura que el carrusel esté pegado al navbar */
   height: 100vh; /* Asegura que el carrusel ocupe toda la pantalla */
@@ -344,6 +359,152 @@ body, html {
   justify-content: center;
   align-items: center;
   height: 100%;
+}
+
+/* Coloca los botones en forma circular, con animación al presionarlos */
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #007bff;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1001;     /* Asegura que estén encima de la imagen */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.custom-arrow:hover {
+  background-color: #0056b3;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.next-arrow {
+  right: 100px; /* Ubicado a la derecha */
+}
+
+.prev-arrow {
+  left: 100px;  /* Ubicado a la izquierda */
+}
+
+/* Asegura que el contenedor del carrusel tenga posición relativa */
+.carousel-container {
+  position: relative;
+  padding-top: 60px; /* Ajusta este valor según la altura de tu navbar */
+}
+
+/* Oculta las flechas predeterminadas de slick */
+.slick-prev:before,
+.slick-next:before {
+  display: none;
+}
+
+/* Fuerza que tus flechas se muestren */
+.custom-arrow {
+  position: absolute;
+  top: 50%; /* Centrado verticalmente */
+  transform: translateY(-50%);
+  background-color: #007bff !important;
+  color: white;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50%;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1001 !important;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  opacity: 1 !important;
+}
+
+/* Animación al pasar el cursor */
+.custom-arrow:hover {
+  background-color: #0056b3 !important;
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Ubicación de las flechas */
+.next-arrow {
+  right: 10px;
+}
+
+.prev-arrow {
+  left: 10px;
+}
+
+/* Fuerza el posicionamiento actualizado para las flechas */
+.next-arrow {
+  right: 30px !important;
+}
+
+.prev-arrow {
+  left: 30px !important;
+}
+
+/* Asegurarse de que slick no esté ocultando las flechas */
+.slick-arrow {
+  display: block !important;
+  opacity: 1 !important;
+}
+
+/* Estilos para los botones de flecha (agrandados con íconos blancos) */
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #007bff !important;
+  color: white !important;
+  width: 60px !important;  /* Tamaño aumentado */
+  height: 60px !important; /* Tamaño aumentado */
+  border-radius: 50%;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1001 !important;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  opacity: 1 !important;
+}
+
+.custom-arrow i {
+  color: white;       /* Asegura que el ícono sea blanco */
+  font-size: 2rem;    /* Ícono un poco más grande */
+}
+
+.custom-arrow:hover {
+  background-color: #0056b3 !important;
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Ajusta la posición de los botones */
+.next-arrow {
+  right: 30px !important;
+}
+
+.prev-arrow {
+  left: 30px !important;
+}
+
+/* Estilos responsivos para vista móvil */
+@media (max-width: 768px) {
+  .next-arrow {
+    right: 10% !important;  /* Ajusta el valor según lo deseado */
+  }
+  
+  .prev-arrow {
+    left: 10% !important;   /* Ajusta el valor según lo deseado */
+  }
+  
+  .custom-arrow {
+    top: 65% !important; /* Ajusta este valor para bajar los botones */
+    transform: translateY(-50%) !important;
+  }
 }
 
 /* Estilos del contenedor principal */

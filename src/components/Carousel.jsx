@@ -3,15 +3,44 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
+const NextArrow = (props) => {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={`${className} custom-arrow next-arrow`}
+      style={{ ...style }}
+      onClick={onClick}
+    >
+      <i className="fas fa-chevron-right"></i>
+    </div>
+  );
+};
+
+const PrevArrow = (props) => {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={`${className} custom-arrow prev-arrow`}
+      style={{ ...style }}
+      onClick={onClick}
+    >
+      <i className="fas fa-chevron-left"></i>
+    </div>
+  );
+};
+
 const Carousel = () => {
   const settings = {
     dots: true,
     infinite: true,
+    arrows: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
   };
 
   return (
