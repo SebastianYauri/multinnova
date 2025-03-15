@@ -18,3 +18,22 @@
   font-size: 1.25rem; /* Tamaño de fuente del párrafo */
   margin: 2rem 0; /* Aumenta el espaciado superior e inferior del párrafo */
 }
+
+/* Estilos responsivos para vista móvil */
+@media (max-width: 768px) {
+  .phraseContainer {
+    padding: 2rem; /* Ajusta el espaciado interno para vista móvil */
+    margin-top: 0; /* Elimina la superposición */
+    clip-path: none; /* Elimina el borde diagonal */
+  }
+
+  .phraseTitle {
+    font-size: 2rem; /* Ajusta el tamaño de fuente del título para vista móvil */
+    margin-bottom: 1rem; /* Ajusta el espaciado inferior del título */
+  }
+
+  .phraseText {
+    font-size: 1rem; /* Ajusta el tamaño de fuente del párrafo para vista móvil */
+    margin: 1rem 0; /* Ajusta el espaciado superior e inferior del párrafo */
+  }
+}
