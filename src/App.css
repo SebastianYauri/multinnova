@@ -1,3 +1,5 @@
+@import '../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
+
 body, html {
   background-color: white; /* Fondo blanco para toda la página */
   margin: 0;
@@ -364,10 +366,12 @@ body, html {
 
 /* Estilos del footer */
 .footer {
-  background-color: #192636;
+  background-color: #1a1a1a;
   color: white;
   padding: 2rem 0;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 .footer-container {
@@ -419,4 +423,32 @@ body, html {
 
 .contact-button:hover {
   background-color: darkred;
+}
+
+.back-to-top {
+  background-color: #F26E22;
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  top: -25px;  /* Ajusta según lo necesites para que esté mitad en el footer y mitad fuera */
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-to-top:hover {
+  background-color: #b25018;
+}
+
+.back-to-top:active {
+  background-color: #b25018;
+  transform: scale(0.9);
 }
