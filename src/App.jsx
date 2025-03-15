@@ -4,6 +4,8 @@ import './index.css';
 import Navbar from './components/Navbar';
 import Carousel from './components/Carousel';
 import Footer from './components/Footer';
+import Phrase from './components/Phrase/Phrase'; // Importa el nuevo componente
+
 
 function App() {
   const [count, setCount] = useState(0);
@@ -13,6 +15,7 @@ function App() {
       <Navbar />
       <div className="main-content">
         <Carousel />
+        <Phrase />
         {/* Tu contenido principal aquí */}
       </div>
       <Footer />

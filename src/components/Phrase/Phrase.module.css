@@ -1,0 +1,20 @@
+.phraseContainer {
+  background-color: #002147; /* Color de fondo azul oscuro */
+  color: white; /* Color del texto blanco */
+  padding: 10rem 2rem; /* Aumenta el espaciado interno para agrandar la sección */
+  text-align: center; /* Centrar el texto */
+  width: 100vw; /* Toma el ancho completo del viewport */
+  margin-left: calc((100vw - 100%)/2); /* Centra el contenedor si el padre tiene un ancho limitado */
+  margin-top: -170px; /* Superpone ligeramente al carrusel */
+  clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 100%); /* Crea un borde diagonal más inclinado */
+}
+
+.phraseTitle {
+  font-size: 2.5rem; /* Tamaño de fuente del título */
+  margin-bottom: 3rem; /* Aumenta el espaciado inferior del título */
+}
+
+.phraseText {
+  font-size: 1.25rem; /* Tamaño de fuente del párrafo */
+  margin: 2rem 0; /* Aumenta el espaciado superior e inferior del párrafo */
+}
