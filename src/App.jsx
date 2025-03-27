@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import './index.css';
 import Navbar from './components/Navbar';
-import Carousel from './components/Carousel';
+import Carousel from './components/Carousel/Carousel';
 import Footer from './components/Footer';
 import Phrase from './components/Phrase/Phrase'; // Importa el nuevo componente
 
