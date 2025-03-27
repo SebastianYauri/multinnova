@@ -31,7 +31,7 @@ function Footer() {
           <p><i className="fas fa-map-marker-alt"></i> Coop.Huancayo Mz. K Lote 1 – El Agustino Lima, Perú</p>
           <p><i className="fas fa-phone-alt"></i> Teléfono: +01 623 – 5577</p>
           <p><i className="fas fa-mobile-alt"></i> Celular: 953 796 029</p>
-          <p><i className="fas fa-envelope"></i> Email: ftrujillo@multinnovasportperu.com</p>
+          <p><i className="fas fa-envelope"></i>ftrujillo@multinnovasportperu.com</p>
         </div>
         <div className="footer-section">
           <h3>Escribenos</h3>
