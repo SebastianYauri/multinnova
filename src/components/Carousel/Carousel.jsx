@@ -18,6 +18,15 @@ const Carousel = () => {
 
   return (
     <div className={styles['carousel-container']}>
+      <div className={styles['carousel-overlay']}></div> {/* Capa gris */}
+      <div className={styles['carousel-text']}>
+        <span>Welcome to Lindor Agency</span>
+        <h1>SMART WEB</h1>
+        <h1>DESIGN AGENCY</h1>
+        <a href="#discover" className={styles['carousel-button']}>
+          Discover More
+        </a>
+      </div>
       <Slider {...settings}>
         <div>
           <img src="/image-1.webp" alt="Slide 1" className={styles['carousel-image']} />
